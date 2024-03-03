@@ -2,8 +2,8 @@
 Diverse eksempler på bruk av ulike ai-tjenester. Koden er skrevet i Python for enkel prototyping og bruker ulike biblioteker for å kalle på tjenestene.
 
 ## Mappestruktur
-📂 [01 - Basiseksempler](./01%20-%20Basiseksempler/) inneholder enkle eksempler på bruk av ulike tjenester med OpenAI-API'et.<br>
-📂 [02 - Lokal LLM](./02%20-%20Lokal%20LLM/) inneholder eksempler med lokal språkmodell
+📂 [01 - Basiseksempler](./01%20-%20Basiseksempler/) -> enkle eksempler med bruk av OpenAI-API'et.<br>
+📂 [02 - Lokal LLM](./02%20-%20Lokal%20LLM/) -> eksempler med lokal språkmodell og Ollama
 
 ## Miljøvariabler
 For å kunne kjøre eksemplene må du sette opp miljøvariabler for de ulike tjenestene. Dette gjøres ved å opprette en fil med navn .env i rotmappen. Filen skal inneholde følgende variabler:
