@@ -2,7 +2,7 @@
 Diverse eksempler på bruk av ulike ai-tjenester. Koden er skrevet i Python for enkel prototyping og bruker ulike biblioteker for å kalle på tjenestene.
 
 ## Mappestruktur
-📂 [01 - Basiseksempler](01 - Basiseksempler) inneholder enkle eksempler på bruk av ulike tjenester med OpenAI-API'et.
+📂 [01 - Basiseksempler](./01%20-%20Basiseksempler/) inneholder enkle eksempler på bruk av ulike tjenester med OpenAI-API'et.
 
 📂 **02 - Lokal LLM** inneholder eksempler med lokal språkmodell
 
