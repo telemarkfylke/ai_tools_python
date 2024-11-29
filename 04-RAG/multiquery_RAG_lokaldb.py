@@ -32,7 +32,7 @@ QUERY_PROMPT = PromptTemplate(
 )
 
 # Definerer modeller og vektordatabase
-llm = ChatOpenAI(model_name="gpt-4o", temperature=0)
+llm = ChatOpenAI(model_name="gpt-4o-2024-11-20", temperature=0)
 output_parser = LineListOutputParser()
 embedding = OpenAIEmbeddings(model="text-embedding-3-large")
 db = Chroma(persist_directory="./vectorstore", embedding_function=embedding)
@@ -41,18 +41,21 @@ db = Chroma(persist_directory="./vectorstore", embedding_function=embedding)
 llm_chain = QUERY_PROMPT | llm | output_parser
 
 # Other inputs
-question = "Hvordan finner man fellesnevner?"
+question = "Forklar hvordan man løser oppgave 4.3.2a?"
+
 
 
 # Henter relevante dokumenter fra vektordatabasen basert på brukerens spørsmål (Fem varianter av spørsmålet)
 retriever = MultiQueryRetriever(retriever=db.as_retriever(), llm_chain=llm_chain, verbose=True)
 print("Retrieving documents...")
-unique_docs = retriever.invoke(question)
-pp.pprint(unique_docs)
-
 # Log queries
 logging.basicConfig(level=logging.INFO)
 logging.getLogger("langchain").setLevel(logging.INFO)
+
+unique_docs = retriever.invoke(question)
+pp.pprint(unique_docs)
+
+
 
 # Results
 

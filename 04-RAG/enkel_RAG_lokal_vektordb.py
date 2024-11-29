@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 OPENAI_API_KEY =  os.environ["OPENAI_API_KEY"]
-llm = ChatOpenAI(model_name="gpt-4o", temperature=0)
+llm = ChatOpenAI(model_name="gpt-4o-2024-11-20", temperature=0)
 folderpath = "./dokumenter/"
 
 system_prompt = ("Svar på spørsmålet basert kun på den gitte konteksten. Den viktigste informasjon som kan gis som svar er kildene henvist i konteksten, men bør ha en assosiert tekst. Kilder fra kontekst skal legges ved i svaret som 'Andre relevante sider:")

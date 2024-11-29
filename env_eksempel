@@ -1,0 +1,3 @@
+POSTBOKS="minepost@mittfylke.no"
+TOKEN="<JWT-token>"
+OPENAI_API_KEY="<API-key>"

@@ -9,7 +9,7 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
-client = ChatOpenAI(model="gpt-4o")
+client = ChatOpenAI(model="gpt-4o-2024-11-20", temperature=0)
 systemprompt = "Vedlagt er tekst som er hentet fra et vedlegg til en epost. Skriv en kort oppsummering av teksten. Ta med viktig informasjon som firmanavn, epostadresser, henvisninger til lover, regler eller prosjekt og tilsvarende. Her er teksten:"
 
 # Henter ut tekst fra pdf-filer som ligger i en mappestruktur og lagrer i en tekstfil i samme mappe.

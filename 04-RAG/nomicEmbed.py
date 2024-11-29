@@ -1,19 +1,12 @@
-from nomic import embed
-import numpy as np
+# Test av lokal embeddingmodell
 
-output = embed.text(
-    texts=[
-        'Nomic Embed now supports local and dynamic inference to save you inference latency and cost!',
-        'Hey Nomic, why don\'t you release a multimodal model soon?',
-    ],
+from langchain_nomic import NomicEmbeddings
+
+embeddings = NomicEmbeddings(
     model='nomic-embed-text-v1.5',
-    task_type="search_document",
     inference_mode='local',
-    dimensionality=768,
+    device='gpu',
 )
 
-print(output['usage'])
-
-embeddings = np.array(output['embeddings'])
-
-print(embeddings.shape)
+result = embeddings.embed_documents(['text to embed'])
+print(result)
