@@ -1,18 +1,29 @@
-# ai_tools_python
-Diverse eksempler på bruk av ulike ai-tjenester. Koden er skrevet i Python for enkel prototyping og bruker ulike biblioteker for å kalle på tjenestene.
+# labs_sentralbordet
+Et labseksperiment for å se på automagisk kategorisering og videresending av eposter
 
-## Mappestruktur
-📂 [01 - Basiseksempler](./01%20-%20Basiseksempler/) -> enkle eksempler med bruk av OpenAI-API'et.<br>
-📂 [02 - Lokal LLM](./02%20-%20Lokal%20LLM/) -> eksempler med lokal språkmodell og Ollama
+## Innhold
+- [01-Basiseksempler](./01-Basiseksempler/)
+- [02-Datauttrekk](./02-Datauttrekk/) (under utvikling) 
+- [03-Klassifisering](./03-Klassifisering/) (under utvikling)
+...
+...
 
-## Miljøvariabler
-For å kunne kjøre eksemplene må du sette opp miljøvariabler for de ulike tjenestene. Dette gjøres ved å opprette en fil med navn .env i rotmappen. Filen skal inneholde følgende variabler:
+## Bakgrunn
+Dette er et labseksperiment for å se på automagisk kategorisering/klassifisering og videresending av eposter. Vi har en felles epostkonto som mottar eposter fra ulike kilder. Vi ønsker å kategorisere disse epostene og videresende de til ulike mottakere basert på innholdet i epostene. Vi ønsker å gjøre dette på en enkel og skalerbar måte.
 
-```
-OPENAI_API_KEY=sk-....
-LANGCHAIN_API_KEY=ls__....
-LANGCHAIN_PROJECT=<MyLangSmithProject>
-LANGCHAIN_TRACING_V2 = true
-LANGCHAIN_ENDPOINT=https://api.smith.langchain.com
-HUGGINGFACEHUB_API_TOKEN=hf_...
-```
+## 01-Basiseksempler
+Dette er en mappe som inneholder noen basiseksempler med ulike funksjoner som:
+    - Hente ut eposter med vedlegg fra en epostkonto
+    - Strukturere data fra epostene og lagre disse i en JSON-objekter
+    - Hente ut vedlegg fra epostene og lagre disse i en mappe
+    - Lesing av pdf-filer og chatte med disse
+    - Klassifisering av tekst
+
+## 02-Datauttrekk
+Denne mappen inneholder skript for å hente ut data fra eposter og lagre disse i en database. Dette er under utvikling.
+
+## 03-Metadata
+Denne mappen inneholder skript for å hente ut metadata fra eposter og vedlegg. Dette er under utvikling.
+
+## 04-RAG
+Mappe med ulike varianter av RAG-systemer for å bruke LLM'er mot definerte datakilder.
