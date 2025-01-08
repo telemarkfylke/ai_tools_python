@@ -27,3 +27,6 @@ Denne mappen inneholder skript for å hente ut metadata fra eposter og vedlegg. 
 
 ## 04-RAG
 Mappe med ulike varianter av RAG-systemer for å bruke LLM'er mot definerte datakilder.
+
+## 05-Transkribering
+Mappe med skript for å transkribere lydfiler til tekst ved hjelp av nasjonalbibliotekets modell.
